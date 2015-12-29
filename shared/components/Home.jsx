@@ -18,10 +18,12 @@ export default class Home extends React.Component {
   ]
   
   render() {
+    let styles = require('css/style.scss');
+
     const { todos, dispatch } = this.props;
 
     return (
-      <div id="todo-list">
+      <div id="todo-list" classNames={styles.background}>
         <TodosView todos={todos}
           {...bindActionCreators(TodoActions, dispatch)} />
 
